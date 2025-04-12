@@ -19,7 +19,7 @@ function App() {
         setLoading(true);
         setError('');
         try {
-            const response = await axios.get(`${process.env.REACT_APP_API_URL}/weather`);            ;
+            const response = await axios.get(`${process.env.REACT_APP_API_URL}/weather?city=${city}`);
             setWeather(response.data);
         } catch (err) {
             setError('City not found or network error.');
