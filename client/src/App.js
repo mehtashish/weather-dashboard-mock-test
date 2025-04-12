@@ -43,7 +43,7 @@ function App() {
     }, [weather]);
 
     return (
-        <div className={`app-container ${weather ? weather.condition.toLowerCase().replace(/\s/g, '-') : ''}`}>
+        <div className={`app-container ${weather?.condition ? weather.condition.toLowerCase().replace(/\s/g, '-') : ''}`}>
             <h1 className="app-title">☁️ Real-Time Weather Dashboard</h1>
             <SearchBar onSearch={fetchWeather} />
             {loading && <p>Loading...</p>}
