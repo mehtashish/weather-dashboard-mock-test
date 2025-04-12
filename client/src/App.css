@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  color: #ffffff;
+  transition: background 0.8s ease;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.input-group input {
+  padding: 0.8rem;
+  width: 70%;
+  max-width: 300px;
+  border: none;
+  border-radius: 10px 0 0 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-group button {
+  padding: 0.8rem 1.2rem;
+  background: #ffffff33;
+  border: none;
+  border-radius: 0 10px 10px 0;
+  backdrop-filter: blur(10px);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-group button:hover {
+  background: #ffffff55;
+}
+
+.weather-card {
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.weather-card img {
+  width: 80px;
+  height: 80px;
+}
+
+.error-text {
+  color: #ffdddd;
+  background-color: rgba(255, 0, 0, 0.2);
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+body.clear {
+  background: linear-gradient(to top, #2980b9, #6dd5fa, #ffffff);
+}
+
+body.clouds {
+  background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+body.rain {
+  background: linear-gradient(to top, #4b79a1, #283e51);
+}
+
+body.snow {
+  background: linear-gradient(to top, #83a4d4, #b6fbff);
+}
+
+body.thunderstorm {
+  background: linear-gradient(to top, #141e30, #243b55);
+}
+
+body.mist,
+body.haze,
+body.smoke {
+  background: linear-gradient(to top, #3e5151, #decba4);
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group input,
+  .input-group button {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .input-group button {
+    margin-top: 0.5rem;
+  }
+
+  .weather-card {
+    padding: 1.5rem;
+  }
+
+  .app-title {
+    font-size: 2rem;
+  }
+}
